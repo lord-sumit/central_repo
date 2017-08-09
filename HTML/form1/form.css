@@ -1,0 +1,79 @@
+body {
+	background-color: white;
+	
+}
+#container {
+	background-color: #f1f1f1;
+	margin: auto;
+	width: 540px;
+}
+#header {
+	text-align: center;
+	padding-top: 5px;
+}
+#header2 {
+	padding-left: 25px; 
+}
+#personal {
+	padding-top: 2px;
+}
+#personal_detail {
+	display: inline-block;
+}
+#personal_detail_list {
+	padding: 0px;
+	margin: 0px;
+}
+.personal_detail_li {
+	list-style-type: none;
+	padding-bottom: 5px;
+	padding-left: 2px;
+}
+#personal_detail_here {
+	display: inline-block;
+}
+.input_element{
+	margin-bottom: 5px;
+}
+#Website {
+	width: 210px;
+}
+#bottom {
+	padding-left: 20px;
+	padding-bottom: 15px;
+}
+#Comments {
+	margin-bottom: 0px;
+}
+#textarea {
+	height: 150px;
+	width: 250px;
+	margin-bottom: 15px;
+}
+#radio {
+	margin-bottom: 15px; 
+}
+#check {
+	margin-bottom: 15px 
+}
+#textarea1 {
+	height: 150px;
+    width: 420px;
+}
+#spices {
+	margin-bottom: 15px;
+}
+.Your {
+	display: inline-block;
+	margin-top: 0px;
+}
+#color {
+	margin-bottom: 15px;
+}
+.bottom_heading {
+	margin: 0px;
+}
+#url {
+	width: 380px;
+	margin-bottom: 15px;
+}
