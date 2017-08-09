@@ -1,8 +1,3 @@
-window.onload = function() {
-  var caller = new Checker(null);
-  caller.bindEvent();
-};
-
 function Checker(prom) {
   this.prom = prom;
 };
@@ -27,4 +22,9 @@ Checker.prototype.bindEvent = function() {
       alert("hello : "+this.prom);
     }
   }  
-}
+};
+
+window.onload = function() {
+  var caller = new Checker(null);
+  caller.bindEvent();
+};
