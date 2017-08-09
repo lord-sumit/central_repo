@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>form</title>
+  <link rel="stylesheet" type="text/css" href="form.css" >
+</head>
+<body>
+  <div id="container" >
+	<form>
+	  <div id="header" >
+	  	<h1>HTML form exercise</h1>
+	  </div>
+	  <div id="header2" >
+		<h4>Contact form</h4>
+	  </div>
+	  <div id="personal" >
+		<div id="personal_detail" >
+		  <ul id="personal_detail_list" >
+			<li class="personal_detail_li">Your name*:</li>
+			<li class="personal_detail_li">E-mail*:</li>
+			<li class="personal_detail_li">Phone number*:</li>
+			<li class="personal_detail_li">Website*:</li>
+		  </ul>
+		</div>
+		<div id="personal_detail_here" >
+		  <input class="input_element" type="text" name="Your_name" ><br>
+		  <input class="input_element" type="email" name="E-mail" ><br>
+		  <input class="input_element" type="number" name="Phone_num" ><br>
+		  <input class="input_element" id="Website" type="url" name="Website" value="https://">
+		</div>
+	  </div>	
+	  <div id="bottom">
+		<p id="Comments">Comments</p>
+		<textarea id="textarea" name="message" ></textarea>
+		<p class="bottom_heading">Text field</p>
+		<p class="Your">Your name :</p>
+		<input type="text" name="Your">
+		<h4 class="bottom_heading">Password field</h4>
+		<p class="Your">Password :</p>
+		<input type="text" name="Password">
+		<h4 class="bottom_heading">Radio buttons</h4>
+		<p class="bottom_heading">Do you like pizza?</p>
+		<input type="Radio" name="like" value="Yes" >Yes<br>
+		<input type="Radio" name="like" value="No" >No<br>
+		<input type="Radio" name="like" value="Maybe" >Maybe<br>
+		<input id="radio" type="Radio" name="like" value="Never_tried" >Never tried<br>
+		<h4 class="bottom_heading">Check Box</h4>
+		<input id="check" type="checkbox" name="like" value="like">Check this box if you like our like_service<br>
+		<h4 class="bottom_heading">Text area</h4>
+		<p class="bottom_heading">Anything you would like to say?:</p>
+		<textarea id="textarea1" name="textarea" ></textarea>
+		<h4>I Like</h4>
+		<input list="spices">
+		<datalist id="spices">
+		  <option value="mushrooms" >
+		  <option value="green peppers" >
+		  <option value="onions">
+		  <option value="tomatoes">
+		  <option value="olives">
+		</datalist>
+		<h4 class="bottom_heading">Menu</h4>
+		<p class="bottom_heading">Your favorite color:</p>
+		<select id="color" name="color">
+		  <option value="Red">Red</option>
+		  <option value="Green">Green</option>
+		  <option value="Blue">Blue</option>
+		</select>
+		<h4 class="bottom_heading">Attach file</h4>
+		<input id="url" type="url" name="url">
+		<input type="button" value="browse">
+		<h4 class="bottom_heading">Buttons</h4>
+		<input type="submit" value="submit">
+		<input type="reset">
+	  </div>
+	</form>
+  </div>
+</body>
+</html>
