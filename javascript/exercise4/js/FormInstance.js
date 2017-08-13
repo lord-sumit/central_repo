@@ -11,25 +11,13 @@ function FormInstance(input, text, checkbox, submit) {
 
 FormInstance.prototype.bindEvents = function() {
   var _this = this;
+  debugger;
   this.submit.addEventListener("click", function(event){
-    for (var index = 0; index < _this.input.length; index++) {
-  	  switch(index){
-  	    case 0:
-  	  	  _this.numberCheck(index);
-  	  	  break;
-  	  	case 1:  
-  	  	  _this.emailCheck(index);
-  	  	  break;
-  	  	case 2:
-  	  	  _this.alphabetCheck(index);
-  	  	  break;
-  	  	case 4:
-  	  	  _this.homeCheck(index);
-  	  	  break;
-  	  	default:
-  	  	  break;
-  	  }
-  	};
+    debugger;
+    _this.numberCheck(fillit.getAttribute('data-type'));
+    _this.alphabetCheck();
+    _this.emailCheck();
+    _this.homeCheck();
   	if(_this.text.value == ""){
   	  alert("please write in textarea");
   	}
@@ -40,8 +28,8 @@ FormInstance.prototype.bindEvents = function() {
 };
 
 FormInstance.prototype.numberCheck = function(index) {
-  var text = this.input[index].value,
-    match;
+  var text = this.input[index].value;
+  var match;
   match = this.numberPattern.test(text);
   if(!match){
     alert("invalid id");
@@ -49,8 +37,8 @@ FormInstance.prototype.numberCheck = function(index) {
 };
 
 FormInstance.prototype.alphabetCheck = function(index) {
-  var text = this.input[index].value,
-    match;
+  var text = this.input[index].value;
+  var match;
   match = this.alphabetPattern.test(text);
   if(!match){
   	alert("invalid name");
@@ -58,8 +46,8 @@ FormInstance.prototype.alphabetCheck = function(index) {
 };
 
 FormInstance.prototype.emailCheck = function(index) {
-  var email = this.input[index].value,
-    match;
+  var email = this.input[index].value;
+  var match;
   match = this.emailPattern.test(email);
   if(match == false){
   	alert("invalid email id");
@@ -67,12 +55,12 @@ FormInstance.prototype.emailCheck = function(index) {
 };
 
 FormInstance.prototype.homeCheck = function(index) {
-  var url = this.input[index].value,
-    match;
+  var url = this.input[index].value;
+  var match;
   match = this.homePattern.test(url);
   if(match == false){
   	alert("invalid url");
-  }	
+  }
 };
 
 window.onload = function () {

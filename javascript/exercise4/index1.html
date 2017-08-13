@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    test
     <title>js form</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
   </head>
@@ -20,26 +19,26 @@
             <p >Homepage</p>
           </div>
           <div id="section_right">
-            <input class="fillit" type="text" name="first_input">
-            <input class="fillit" type="email" name="email" >
-            <input class="fillit" type="text" name="name" >
+            <input class="fillit" type="text" name="first_input" data-type="first">
+            <input class="fillit" type="email" name="email" data-second="second">
+            <input class="fillit" type="text" name="name" data-third="third">
             <select class="fillit" id="select">
               <option value="GMT">GMT</option>
             </select>
-            <input class="fillit" type="url" name="url" >
+            <input class="fillit" type="url" name="url" data-fourth="fourth">
           </div>
           <p>About Me</p>
           <textarea id="text" name="text"></textarea>
-           <input type="checkbox" name="notification" id="checkbox">
-           <p id="recieve" id="font_s">Recieve Notification of comments</p>
-           <p>You will be sent an email when someone posts comments to your blog aur elbum</p>
+          <input type="checkbox" name="notification" id="checkbox">
+          <p id="recieve" id="font_s">Recieve Notification of comments</p>
+          <p>You will be sent an email when someone posts comments to your blog aur elbum</p>
           <div id="footer">
             <p>Your password will be mailed to you</p>
-            <input id="submit_b" type="submit" name="submit" value="GO">
+            <input id="submit" type="submit" name="submit" value="GO">
           </div>
         </div>
       </form>
     </div>
-    <script type="text/javascript" src="./js/form_instance.js"></script>
+    <script src="./js/FormInstance.js"></script>
   </body>
 </html>
