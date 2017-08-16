@@ -1,11 +1,11 @@
-function SelectBoxDoc(leftList, rightList, addButton, deleteButton) {
+function Country(leftList, rightList, addButton, deleteButton) {
   this.leftList = leftList;
   this.rightList = rightList;
   this.addButton = addButton;
   this.deleteButton = deleteButton;
 };
 
-SelectBoxDoc.prototype.bindEvents = function() {
+Country.prototype.bindEvents = function() {
   _this = this;
   this.addButton.addEventListener("click", function() {
     _this.commonEvent(_this.leftList, _this.rightList);
@@ -15,7 +15,7 @@ SelectBoxDoc.prototype.bindEvents = function() {
   });
 };
 
-SelectBoxDoc.prototype.commonEvent = function(list1, list2) {
+Country.prototype.commonEvent = function(list1, list2) {
   for (var index = list1.length - 1; index >= 0; index--) {
     if(list1.options[index].selected == true){
       list2.appendChild(list1.options[index]);
@@ -24,9 +24,9 @@ SelectBoxDoc.prototype.commonEvent = function(list1, list2) {
 };
 
 window.onload = function() {
-  var instance = new SelectBoxDoc(document.getElementById('select1'),
-                                  document.getElementById('select2'),
-                                  document.getElementById('add'),
-                                  document.getElementById('delete'));
+  var instance = new Country(document.getElementById('select1'),
+                             document.getElementById('select2'),
+                             document.getElementById('add'),
+                             document.getElementById('delete'));
   instance.bindEvents();
 };
