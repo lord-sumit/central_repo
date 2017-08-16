@@ -41,3 +41,4 @@ window.onload = function() {
                                     document.getElementById('deleteButton'));
   instance.bindEvents();
 };
+
