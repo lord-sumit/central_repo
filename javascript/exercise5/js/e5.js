@@ -9,7 +9,6 @@ SelectInstance.prototype.bindEvents = function() {
   _this = this;
   this.add.addEventListener("click", function(event) {
     for (var index = _this.select1.length - 1; index >= 0; index--) {
-      debugger;
       if(_this.select1.options[index].selected == true)
       {
         _this.adder(_this.select1, _this.select2, index);
