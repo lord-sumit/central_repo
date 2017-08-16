@@ -1,0 +1,11 @@
+#first_div {
+  height: 100px;
+  width: 250px;
+}
+
+#list {
+  height: 50px;
+  width: 100px;
+  list-style-type: none;
+  overflow-y: scroll;
+}
