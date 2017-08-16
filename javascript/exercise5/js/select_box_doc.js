@@ -1,6 +1,6 @@
-function SelectBoxDoc(leftListId, rightListId, addButton, deleteButton) {
-  this.leftList = leftListId;
-  this.rightList = rightListId;
+function SelectBoxDoc(list1, list2, addButton, deleteButton) {
+  this.leftList = list1;
+  this.rightList = list2;
   this.addButton = addButton;
   this.deleteButton = deleteButton;
 };
