@@ -1,0 +1,17 @@
+#first_div {
+  height: 100px;
+  width: 250px;
+}
+
+#list {
+  height: 100px;
+  width: 150px;
+  list-style-type: none;
+  overflow-y: scroll;
+}
+
+.sublist {
+  list-style-type: none;
+  overflow-y: scroll;
+  visibility: hidden;
+}
