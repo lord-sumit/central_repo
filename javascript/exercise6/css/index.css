@@ -1,0 +1,13 @@
+#list {
+  height: 80px;
+  width: 150px;
+  list-style-type: none;
+  overflow-y: scroll;
+}
+
+.sublist {
+  list-style-type: none;
+  overflow-y: scroll;
+  visibility: hidden;
+  display: none;
+}
