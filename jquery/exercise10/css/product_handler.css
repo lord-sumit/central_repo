@@ -1,0 +1,15 @@
+#right_section {
+  width: 1100px;
+  float: right;
+}
+
+#left_section {
+  float: left;
+  width: 150px;
+  background-color: yellow;
+  border-right: 2px;
+}
+
+.image {
+  display: none;
+}
