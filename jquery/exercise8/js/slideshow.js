@@ -1,38 +1,45 @@
-function SlideShow(slideShow ,header ,list) {
-  this.$slideShowElement = slideShow;
-  this.$header = header;
-  this.$list = list;
-  this.$element;
-  this.$nextElement;
+function SlideShow($slideShow) {
+  this.$slideShowElementChildren = $slideShow;
 };
 
-SlideShow.prototype.bindEvents = function() {
-  (this.$slideShowElement.remove()).insertBefore(this.$header);
-  this.$element = this.$list.children().last();
-  this.$nextElement = this.$element.next();
-  this.fader();
+SlideShow.prototype.Duration = 300;
+
+SlideShow.prototype.init = function() {
+  /*1.Move the #slideshow element to the top of the body.*/
+  this.insertElement($("body"), this.$slideShowElementChildren);
+  this.bindEvent();
 };
 
-SlideShow.prototype.fader = function() {
-  var this_ = this;
-  this.$element.fadeIn(300).delay(2000).fadeOut(300,function () {
-    this_.elementCheck(this_.$nextElement);
-    this_.$element = this_.$nextElement;
-    this_.$nextElement = this_.$nextElement.next();
-    this_.fader();
-  });
+SlideShow.prototype.insertElement = function($insertIn, $moveElement) {
+  $insertIn.prepend($moveElement.parent());
 };
 
-SlideShow.prototype.elementCheck = function(element) {
-  if(!element.length){
-    this.$nextElement = this.$list.children().first();
-  }
-  else{
-    this.$nextElement = this.$nextElement;
-  }
+SlideShow.prototype.bindEvent = function() {
+  /*2.Write code to cycle through the list items inside the element;
+      fade one in, display it for a few seconds, then fade it out and fade in the next one
+    3.When you get to the end of the list, start again at the beginning.*/
+  this.$slideShowElementChildren.fadeToggle();
+  this.$slideShowElementChildren.first().fadeToggle(this.Duration, this.fadeInOut());
+  /*4.For an extra challenge, create a navigation area under the slideshow
+      that shows how many images there are and which image you're currently viewing.*/
 };
 
-$(function(){
-  var instance = new SlideShow($("#slideshow") ,$("#header") ,$("#myList"));
-  instance.bindEvents();
+SlideShow.prototype.fadeInOut = function() {
+  var _this = this;
+  return function() {
+    var $nextElement;
+    if(!($(this).next().length)) {
+      $nextElement = _this.$slideShowElementChildren.first();
+    }
+    else {
+      $nextElement = $(this).next();
+    }
+    $(this).fadeToggle();
+    $nextElement.fadeToggle(_this.Duration, _this.fadeInOut());
+  };
+};
+
+$(document).ready(function() {
+  var slideshow = new SlideShow($("#slideshow > li"));
+  slideshow.init();
 });
