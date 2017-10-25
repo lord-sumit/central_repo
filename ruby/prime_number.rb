@@ -1,11 +1,11 @@
+require "prime"
+
 class Integer
-  def step
-    (2..self).find_all { |number| !number.prime? }
-  end
-  def prime?
-    return false if self == 2
-    (2..self-1).any? { |number| self % number == 0 }
+  def prime_upto
+    array = [2]
+    (3..self).step(2) { |number| array.push(number) if Prime.prime? number }
+    return array
   end
 end
 
-p gets.chop.to_i.step
+p gets.chop.to_i.prime_upto
