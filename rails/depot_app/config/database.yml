@@ -1,0 +1,6 @@
+development:
+  adapter: mysql2
+  database: depot_development
+  host: localhost
+  username: sumit
+  password: password
